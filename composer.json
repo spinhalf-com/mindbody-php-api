@@ -1,10 +1,14 @@
 {
-    "name": "devincrossman/mindbody-php-api",
-    "description": "A PHP wrapper for the MINDBODY Online API",
+    "name": "spinhalf-com/mindbody-php-api",
+    "description": "A PHP wrapper for the MINDBODY Online API version 5.1",
     "authors": [
         {
             "name": "Devin Crossman",
             "email": "devin@devincrossman.com"
+        },
+        {
+            "name": "John Riordan",
+            "email": "john.riordan@spinhalf.com"
         }
     ],
     "license":"MIT",
