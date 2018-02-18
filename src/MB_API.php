@@ -1,6 +1,16 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: johnriordan
+ * Date: 18/02/2018
+ * Time: 19:34
+ *
+ * EDITED FOR COMPATIBILTY WITH MINDBODY API VERSION 5.1
+ */
 namespace DevinCrossman\Mindbody;
-class MB_API {
+
+class MB_API
+{
 	protected $client;
 	protected $sourceCredentials = array(
 		"SourceName"=>'REPLACE_WITH_YOUR_SOURCENAME', 
@@ -15,14 +25,12 @@ class MB_API {
 		"SiteIDs"=>array('REPLACE_WITH_YOUR_SITE_ID')
 	);
 	*/
-	protected $appointmentServiceWSDL = "https://api.mindbodyonline.com/0_5/AppointmentService.asmx?WSDL";
-	protected $classServiceWSDL = "https://api.mindbodyonline.com/0_5/ClassService.asmx?WSDL";
-	protected $clientServiceWSDL = "https://api.mindbodyonline.com/0_5/ClientService.asmx?WSDL";
-	protected $dataServiceWSDL = "https://api.mindbodyonline.com/0_5/DataService.asmx?WSDL";
-	protected $finderServiceWSDL = "https://api.mindbodyonline.com/0_5/FinderService.asmx?WSDL";
-	protected $saleServiceWSDL = "https://api.mindbodyonline.com/0_5/SaleService.asmx?WSDL";
-	protected $siteServiceWSDL = "https://api.mindbodyonline.com/0_5/SiteService.asmx?WSDL";
-	protected $staffServiceWSDL = "https://api.mindbodyonline.com/0_5/StaffService.asmx?WSDL";
+	protected $appointmentServiceWSDL = "https://api.mindbodyonline.com/0_5_1/AppointmentService.asmx?WSDL";
+	protected $classServiceWSDL = "https://api.mindbodyonline.com/0_5_1/ClassService.asmx?WSDL";
+	protected $clientServiceWSDL = "https://api.mindbodyonline.com/0_5_1/ClientService.asmx?WSDL";
+	protected $saleServiceWSDL = "https://api.mindbodyonline.com/0_5_1/SaleService.asmx?WSDL";
+	protected $siteServiceWSDL = "https://api.mindbodyonline.com/0_5_1/SiteService.asmx?WSDL";
+	protected $staffServiceWSDL = "https://api.mindbodyonline.com/0_5_1/StaffService.asmx?WSDL";
 
 	protected $apiMethods = array();
 	protected $apiServices = array();
@@ -39,8 +47,6 @@ class MB_API {
 			'AppointmentService' => $this->appointmentServiceWSDL,
 			'ClassService' => $this->classServiceWSDL,
 			'ClientService' => $this->clientServiceWSDL,
-			'DataService' => $this->dataServiceWSDL,
-			'FinderService' => $this->finderServiceWSDL,
 			'SaleService' => $this->saleServiceWSDL,
 			'SiteService' => $this->siteServiceWSDL,
 			'StaffService' => $this->staffServiceWSDL
