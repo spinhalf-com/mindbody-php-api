@@ -17,14 +17,14 @@ class MB_API
 		"Password"=>'REPLACE_WITH_YOUR_PASSWORD', 
 		"SiteIDs"=>array('REPLACE_WITH_YOUR_SITE_ID')
 	);
-	/*
-	** Uncomment if you need user credentials
+
+	//** Uncomment if you need user credentials
 	protected $userCredentials = array(
-		"Username"=>'REPLACE_WITH_YOUR_USERNAME', 
+		"UserName"=>'REPLACE_WITH_YOUR_USERNAME',
 		"Password"=>'REPLACE_WITH_YOUR_PASSWORD', 
 		"SiteIDs"=>array('REPLACE_WITH_YOUR_SITE_ID')
 	);
-	*/
+
 	protected $appointmentServiceWSDL = "https://api.mindbodyonline.com/0_5_1/AppointmentService.asmx?WSDL";
 	protected $classServiceWSDL = "https://api.mindbodyonline.com/0_5_1/ClassService.asmx?WSDL";
 	protected $clientServiceWSDL = "https://api.mindbodyonline.com/0_5_1/ClientService.asmx?WSDL";
