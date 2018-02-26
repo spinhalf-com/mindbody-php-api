@@ -20,7 +20,7 @@ class MB_API
 
 	//** Uncomment if you need user credentials
 	protected $userCredentials = array(
-		"UserName"=>'REPLACE_WITH_YOUR_USERNAME',
+		"Username"=>'REPLACE_WITH_YOUR_USERNAME',
 		"Password"=>'REPLACE_WITH_YOUR_PASSWORD', 
 		"SiteIDs"=>array('REPLACE_WITH_YOUR_SITE_ID')
 	);
@@ -79,6 +79,22 @@ class MB_API
 				}
 			}
 		}
+
+        if(!empty($userCredentials)) {
+            if(!empty($userCredentials['Username'])) {
+                $this->userCredentials['Username'] = $userCredentials['Username'];
+            }
+            if(!empty($userCredentials['Password'])) {
+                $this->userCredentials['Password'] = $userCredentials['Password'];
+            }
+            if(!empty($userCredentials['SiteIDs'])) {
+                if(is_array($userCredentials['SiteIDs'])) {
+                    $this->userCredentials['SiteIDs'] = $userCredentials['SiteIDs'];
+                } else if(is_numeric($userCredentials['SiteIDs'])) {
+                    $this->userCredentials['SiteIDs'] = array($userCredentials['SiteIDs']);
+                }
+            }
+        }
 	}
 
 	/*
